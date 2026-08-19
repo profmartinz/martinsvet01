@@ -1,121 +1,138 @@
+<!-- Declaração do tipo de documento: instrui o navegador que a página utiliza o padrão HTML5 -->
 <!DOCTYPE html>
+<!-- Tag raiz que engloba todo o documento HTML, com o atributo lang definindo o idioma como Português do Brasil -->
 <html lang="pt-br">
-
+<!-- Elemento que contém os metadados e configurações da página (não visíveis diretamente ao usuário) -->
 <head>
+    <!-- Define a codificação de caracteres como UTF-8, garantindo suporte a acentos e caracteres especiais -->
     <meta charset="UTF-8">
+    <!-- Configura a viewport para garantir renderização responsiva e escala correta em dispositivos móveis -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Define o título da página exibido na aba do navegador e nos motores de busca -->
     <title>MartinsVet - Pet Shop & Clínica Veterinária</title>
+    <!-- Vincula a folha de estilos externa (style.css) ao documento HTML -->
+    <link rel="stylesheet" href="style.css">
+<!-- Fechamento da tag de cabeçalho técnico/metadados -->
 </head>
-
+<!-- Elemento que abriga todo o conteúdo visível da página web -->
 <body>
-
+    <!-- Comentário indicativo da seção de cabeçalho da página -->
     <!-- Cabeçalho -->
-    <header>
+    <!-- Tag semântica para o cabeçalho introdutório da página com a classe CSS 'cabecalho' -->
+    <header class="cabecalho">
+        <!-- Título principal de nível 1 com o nome da marca/empresa -->
         <h1>MartinsVet</h1>
-
+        <!-- Tag semântica que delimita a área de navegação por links do site -->
         <nav>
+            <!-- Início da lista não ordenada que organiza os itens do menu -->
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
+                <!-- Item da lista contendo o link para a seção inicial -->
+                <li><a href="#">Início</a></li>
+                <!-- Item da lista contendo o link para a seção Sobre -->
+                <li><a href="#">Sobre</a></li>
+                <!-- Item da lista contendo o link para a seção de Serviços -->
+                <li><a href="#">Serviços</a></li>
+                <!-- Item da lista contendo o link para a seção de Contatos -->
+                <li><a href="#">Contatos</a></li>
+            <!-- Fechamento da lista do menu -->
             </ul>
+        <!-- Fechamento da barra de navegação -->
         </nav>
-    </header>
-
-    <!-- Hero -->
-    <section>
+    <!-- Fechamento da tag de cabeçalho principal -->
+    </header> 
+    <!-- Seção temática de destaque/banner principal com a classe CSS 'hero' -->
+    <section class="hero">
+        <!-- Divisão genérica (container) para agrupar e organizar os textos do banner -->
         <div>
+            <!-- Título de nível 2 com o slogan/chamada de impacto -->
             <h2>Cuidando da saúde e do bem-estar do seu melhor amigo</h2>
+            <!-- Parágrafo complementar de apoio com descrição resumida e emojis -->
             <p>Pet Shop completo e Clínica Veterinária com atendimento especializado. 🐶🐱</p>
+        <!-- Fechamento do container de texto do hero -->
         </div>
+    <!-- Fechamento da seção hero/banner -->
     </section>
-
+    <!-- Tag semântica que envolve o conteúdo principal exclusivo e central desta página -->
     <main>
-
-        <!-- Seção Sobre -->
-        <section>
+        <!-- Seção 'Sobre Nós' identificada por id para âncoras e estilizada pela classe 'secao' -->
+        <section class="secao" id="sobre">
+            <!-- Título de nível 2 da seção Sobre Nós -->
             <h2>Sobre Nós</h2>
-            <p>
-                A MartinsVet é um Pet Shop e Clínica Veterinária que oferece atendimento
-                humanizado, profissionais qualificados e uma estrutura moderna para cuidar
-                da saúde, higiene e qualidade de vida dos animais de estimação. Nosso compromisso
-                é proporcionar segurança, conforto e carinho em cada atendimento.
-            </p>
+            <!-- Parágrafo descritivo sobre a clínica, sua proposta e valores -->
+            <p>A MartinsVet é um Pet Shop e Clínica Veterinária que oferece atendimento humanizado, profissionais qualificados e uma estrutura moderna para cuidar da saúde, higiene e qualidade de vida dos animais de estimação. Nosso compromisso é proporcionar segurança, conforto e carinho em cada atendimento.</p>
+        <!-- Fechamento da seção Sobre Nós -->
         </section>
 
-        <!-- Seção Serviços -->
-        <section>
+        <!-- Seção de serviços prestados com id para navegação interna -->
+        <section class="secao" id="servicos">
+            <!-- Título de nível 2 da seção de Serviços -->
             <h2>Nossos Serviços</h2>
+            <!-- Container estrutural que agrupa os cards individuais de serviços -->
+            <div class="container-servicos">
 
-            <div>
-
-                <div>
+                <!-- Card individual do serviço de consultas veterinárias -->
+                <div class="servico">
+                    <!-- Título nível 3 com o nome do serviço e ícone decorativo -->
                     <h3>🐾 Consultas Veterinárias</h3>
+                    <!-- Descrição das atividades incluídas nas consultas -->
                     <p>Atendimento clínico, exames preventivos e acompanhamento da saúde do seu pet.</p>
+                <!-- Fechamento do card de consultas -->
                 </div>
 
-                <div>
+                <!-- Card individual do serviço de banho e tosa -->
+                <div class="servico">
+                    <!-- Título nível 3 com o nome do serviço e ícone -->
                     <h3>✂️ Banho e Tosa</h3>
+                    <!-- Descrição dos procedimentos de higiene e tosa -->
                     <p>Higiene completa, tosa especializada e cuidados com a pelagem.</p>
+                <!-- Fechamento do card de banho e tosa -->
                 </div>
 
-                <div>
+                <!-- Card individual do setor de Pet Shop -->
+                <div class="servico">
+                    <!-- Título nível 3 com o nome da área de Pet Shop -->
                     <h3>🛍️ Pet Shop</h3>
+                    <!-- Descrição dos produtos disponíveis para venda -->
                     <p>Rações, brinquedos, medicamentos, acessórios e produtos de higiene para cães e gatos.</p>
+                <!-- Fechamento do card de Pet Shop -->
                 </div>
 
+            <!-- Fechamento do container aglutinador de cards -->
             </div>
+        <!-- Fechamento da seção de Serviços -->
         </section>
 
-        <!-- Seção Contato -->
-        <section>
+        <!-- Seção do formulário de contato/agendamento com classes 'secao' e 'contato' e identificador id -->
+        <section class="secao contato" id="contato">
+            <!-- Título de nível 2 orientando a ação de agendamento -->
             <h2>Agende um Atendimento</h2>
+            <!-- Parágrafo de instrução para o preenchimento dos dados -->
             <p>Preencha o formulário abaixo e nossa equipe entrará em contato.</p>
-
+            <!-- Tag que engloba os campos de entrada de dados do formulário -->
             <form>
-
-                <input
-                    type="text"
-					name = "nome"
-                    id="nome"
-                    placeholder="Nome">
-
-                <input
-                    type="email"
-					name = "email"
-                    id="email"
-                    placeholder="E-mail">
-
-                <input
-                    type="text"
-					name = "assunto"
-                    id="assunto"
-                    placeholder="Assunto">
-
-                <textarea
-                    id="mensagem"
-					name = "mensagem"
-                    placeholder="Mensagem"></textarea>
-
-                <button type="submit">
-                    Enviar
-                </button>
-
+                <!-- Campo de entrada de texto para o nome do tutor -->
+                <input type="text" name="nome" id="nome" placeholder="Nome">
+                <!-- Campo específico para endereço de e-mail (com validação nativa de formato) -->
+                <input type="email" name="email" id="email" placeholder="E-mail">
+                <!-- Campo de texto para informar o assunto da mensagem -->
+                <input type="text" name="assunto" id="assunto" placeholder="Assunto">
+                <!-- Área de texto multilinha para digitação da mensagem ou dúvidas do cliente -->
+                <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui"></textarea>
+                <!-- Botão de submissão do formulário com a classe de estilo 'btn-enviarForm' -->
+                <button type="submit" class="btn-enviarForm">Enviar</button>
+            <!-- Fechamento da tag de formulário -->
             </form>
-
+        <!-- Fechamento da seção de Contato -->
         </section>
-
+    <!-- Fechamento do conteúdo principal da página -->
     </main>
-
-    <!-- Rodapé -->
+    <!-- Tag semântica que define o rodapé institucional do documento -->
     <footer>
+        <!-- Parágrafo com os direitos autorais usando a entidade &copy; (símbolo ©) e o ano corrente -->
         <p>&copy; 2026 MartinsVet - Pet Shop & Clínica Veterinária</p>
+    <!-- Fechamento do rodapé -->
     </footer>
-
+<!-- Fechamento do corpo da página -->
 </body>
-
+<!-- Fechamento da tag raiz do documento HTML -->
 </html>
-
-
-

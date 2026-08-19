@@ -1,0 +1,244 @@
+/* :root define o elemento raiz do documento, usado aqui para declarar variáveis globais reaproveitáveis */
+:root {
+    /* Define a variável --azul com o tom hexadecimal #2E8BC0 (azul principal) */
+    --azul: #2E8BC0;
+    /* Define a variável --azul-claro com o tom #73C2FB */
+    --azul-claro: #73C2FB;
+    /* Define a variável --azul-hover-card com tom azul bem suave para fundos ao passar o mouse */
+    --azul-hover-card: #EAF7FD;
+    /* Define a variável --verde-whatsapp com a cor verde característica (#4CAF50) */
+    --verde-whatsapp: #4CAF50;
+    /* Define a variável --branco com a cor branca pura (#ffffff) */
+    --branco: #ffffff;
+    /* Define a variável --cinza com tom de cinza claro (#f4f6f8) para fundos secundários */
+    --cinza: #f4f6f8;
+    /* Define a variável --preto com tom azul-escuro/chumbo (#2C3E50) para textos e contrastes */
+    --preto: #2C3E50;
+}
+
+/* Seletor universal (*) aplica as regras a absolutamente todos os elementos da página (reset CSS) */
+* {
+    /* Zera a margem externa padrão de todos os elementos */
+    margin: 0;
+    /* Zera o preenchimento/espaçamento interno padrão de todos os elementos */
+    padding: 0;
+    /* Faz com que largura (width) e altura (height) incluam padding e border no cálculo final */
+    box-sizing: border-box;
+}
+
+/* Seletor de tag do corpo principal da página (body) */
+body {
+    /* Define a família tipográfica principal como Arial, com Helvetica e sans-serif como alternativas */
+    font-family: Arial, Helvetica, sans-serif;
+    /* Aplica a cor de fundo usando o valor da variável global --cinza */
+    background: var(--cinza);
+}
+
+/* Seletor da classe .cabecalho (topo/header da página) */
+.cabecalho {
+    /* Define o fundo do cabeçalho com o azul principal da variável --azul */
+    background: var(--azul);
+    /* Define a cor dos textos internos como branca usando a variável --branco */
+    color: var(--branco);
+    /* Centraliza horizontalmente o alinhamento de texto e elementos inline */
+    text-align: center;
+    /* Adiciona 20px de espaçamento interno em todas as quatro direções */
+    padding: 20px;
+}
+
+/* Seletor de listas (ul) filhas diretas ou descendentes da tag de navegação (nav) */
+nav ul {
+    /* Remove os marcadores/bolinhas padrão da lista */
+    list-style: none;
+    /* Adiciona um afastamento superior de 10px em relação ao elemento acima */
+    margin-top: 10px;
+}
+
+/* Seletor de itens de lista (li) dentro da navegação (nav) */
+nav li {
+    /* Altera a exibição de bloco para inline, colocando os itens lado a lado na horizontal */
+    display: inline;
+    /* Define margem externa de 0 vertical (cima/baixo) e 10px horizontal (esquerda/direita) */
+    margin: 0 10px;
+}
+
+/* Seletor de links (a) contidos na barra de navegação (nav) */
+nav a {
+    /* Define a cor do texto do link como branca pela variável --branco */
+    color: var(--branco);
+    /* Remove o sublinhado padrão dos links */
+    text-decoration: none;
+    /* Torna o peso da fonte em negrito */
+    font-weight: bold;
+}
+
+/* Pseudo-classe :hover para quando o usuário passar o cursor sobre o link de navegação */
+nav a:hover {
+    /* Reduz a opacidade para 80%, criando um efeito visual sutil de destaque */
+    opacity: 0.8;
+}
+
+/* Seletor da classe .hero (seção de destaque/banner principal) */
+.hero {
+    /* Carrega o arquivo martinsvet.webp como imagem de fundo da seção */
+    background-image: url(martinsvet.webp);
+    /* Define 200px de padding vertical (cima/baixo) e 20px horizontal (laterais) */
+    padding: 200px 20px;
+    /* Redimensiona a imagem para cobrir toda a área do container sem distorcer */
+    background-size: cover;
+    /* Centraliza o ponto focal da imagem de fundo no container */
+    background-position: center;
+    /* Define a cor do texto interno como branca usando a variável --branco */
+    color: var(--branco);
+    /* Centraliza o texto horizontalmente */
+    text-align: center;
+}
+
+/* Seletor de títulos nível 2 (h2) dentro da área .hero */
+.hero h2 {
+    /* Define o tamanho da fonte do título como 38 pixels */
+    font-size: 38px;
+    /* Adiciona 15px de espaçamento externo abaixo do título */
+    margin-bottom: 15px;
+}
+
+/* Seletor de parágrafos (p) dentro da área .hero */
+.hero p {
+    /* Define o tamanho da fonte do parágrafo como 20 pixels */
+    font-size: 20px;
+}
+
+/* Seletor da classe genérica .secao (cards/seções de conteúdo estrutural) */
+.secao {
+    /* Define a cor de fundo do bloco como branca através da variável --branco */
+    background: var(--branco);
+    /* Define 30px de margem em cima/baixo e centraliza o bloco horizontalmente com 'auto' */
+    margin: 30px auto;
+    /* Limita a largura máxima do bloco a 900px, tornando-o responsivo em telas menores */
+    max-width: 900px;
+    /* Centraliza os textos dentro da seção */
+    text-align: center;
+    /* Define preenchimento interno de 40px vertical e 20px horizontal */
+    padding: 40px 20px;
+    /* Arredonda os quatro cantos da caixa com um raio de 6px */
+    border-radius: 6px;
+}
+
+/* Seletor de títulos nível 2 (h2) dentro de .secao */
+.secao h2 {
+    /* Define a cor do título com o azul da variável --azul */
+    color: var(--azul);
+    /* Adiciona margem externa de 20px abaixo do título para afastar o texto seguinte */
+    margin-bottom: 20px;
+}
+
+/* Seletor de parágrafos (p) dentro de .secao */
+.secao p {
+    /* Define a altura da linha como 1.6 vezes o tamanho da fonte, melhorando a legibilidade */
+    line-height: 1.6;
+}
+
+/* Seletor do container que agrupa os cards de serviços */
+.container-servicos {
+    /* Afasta o container 20px para baixo em relação ao elemento anterior */
+    margin-top: 20px;
+}
+
+/* Seletor dos cards individuais de serviço (.servico) */
+.servico {
+    /* Define o fundo do card com a cor da variável --cinza */
+    background: var(--cinza);
+    /* Adiciona margem externa de 20px abaixo de cada card */
+    margin-bottom: 20px;
+    /* Adiciona 20px de espaçamento interno em todas as direções */
+    padding: 20px;
+    /* Arredonda os cantos do card com raio de 6px */
+    border-radius: 6px;
+    /* Cria uma transição suave de 0.3 segundos para qualquer mudança de estilo (como hover) */
+    transition: 0.3s;
+}
+
+/* Pseudo-classe :hover disparada ao passar o mouse sobre o card de serviço */
+.servico:hover {
+    /* Altera o fundo do card para a cor azul suave da variável --azul-hover-card */
+    background: var(--azul-hover-card);
+    /* Move o card 5px para cima no eixo Y, criando um efeito tridimensional de elevação */
+    transform: translateY(-5px);
+}
+
+/* Seletor de títulos nível 3 (h3) dentro do card .servico */
+.servico h3 {
+    /* Define a cor do texto do título do serviço usando a variável --azul */
+    color: var(--azul);
+    /* Adiciona margem externa de 10px abaixo do título */
+    margin-bottom: 10px;
+}
+
+/* Seletor da tag <form> (formulários da página) */
+form {
+    /* Adiciona espaçamento externo superior de 20px para afastar dos elementos acima */
+    margin-top: 20px;
+}
+
+/* Seletor agrupado para campos de entrada de texto (<input>) e áreas de texto (<textarea>) */
+input,
+textarea {
+    /* Faz os campos ocuparem 100% da largura disponível do elemento pai */
+    width: 100%;
+    /* Adiciona 12px de margem externa superior para separar os campos entre si */
+    margin-top: 12px;
+    /* Adiciona 12px de espaçamento interno para dar conforto ao digitar */
+    padding: 12px;
+    /* Adiciona borda cinza clara sólida com espessura de 1px (#cccccc) */
+    border: 1px solid #cccccc;
+    /* Arredonda os cantos dos campos em 5px */
+    border-radius: 5px;
+    /* Define o tamanho da fonte do texto digitado em 16px */
+    font-size: 16px;
+}
+
+/* Seletor exclusivo para campos <textarea> (área de texto multilinha) */
+textarea {
+    /* Permite que o usuário redimensione o campo apenas na direção vertical (altura) */
+    resize: vertical;
+}
+
+/* Seletor da classe do botão de envio (.btn-enviarForm) */
+.btn-enviarForm {
+    /* Adiciona 20px de margem externa superior */
+    margin-top: 20px;
+    /* Adiciona espaçamento interno de 12px vertical e 25px horizontal */
+    padding: 12px 25px;
+    /* Define o fundo inicial com o tom da variável --azul */
+    background: var(--azul);
+    /* Define a cor do texto do botão como branca pela variável --branco */
+    color: var(--branco);
+    /* Remove a borda padrão do botão do navegador */
+    border: none;
+    /* Arredonda os cantos do botão em 5px */
+    border-radius: 5px;
+    /* Altera o cursor do mouse para o ícone de 'mãozinha' indicando elemento clicável */
+    cursor: pointer;
+    /* Suaviza a troca de cores e estilos em 0.3 segundos */
+    transition: 0.3s;
+}
+
+/* Pseudo-classe :hover disparada ao passar o mouse sobre o botão de envio */
+.btn-enviarForm:hover {
+    /* Altera a cor de fundo do botão para a cor da variável --verde-whatsapp */
+    background: var(--verde-whatsapp);
+}
+
+/* Seletor de rodapé (tag footer).*/
+footer {
+    /* Define a cor de fundo do rodapé com o tom da variável --azul */
+    background: var(--azul);
+    /* Define a cor do texto do rodapé como branca pela variável --branco */
+    color: var(--branco);
+    /* Centraliza o texto horizontalmente */
+    text-align: center;
+    /* Adiciona 15px de preenchimento interno em todas as direções */
+    padding: 15px;
+    /* Adiciona 30px de margem externa superior para afastar do conteúdo acima */
+    margin-top: 30px;
+}
